@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\DataBinding;
+use App\Livewire\LearnValidation;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Episode 4 - Data Binding
-Route::get('/data-binding', DataBinding::class);
+// grouping
+Route::prefix('learn')->group(function () {
+    // Episode 4 - Data Binding
+    Route::get('/data-binding', DataBinding::class);
+    // Episode 5 - Validation
+    Route::get('/validation', LearnValidation::class);
+});
