@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\DataBinding;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Episode 4 - Data Binding
+Route::get('/data-binding', DataBinding::class);
